@@ -1,4 +1,4 @@
-package com.ismadev.magicsnackbar_example;
+package com.ismadev.test;
 
 import android.os.Bundle;
 
