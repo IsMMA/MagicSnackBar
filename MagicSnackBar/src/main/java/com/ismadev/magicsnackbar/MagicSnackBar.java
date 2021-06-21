@@ -3,11 +3,16 @@ package com.ismadev.magicsnackbar;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewStub;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
 
 public class MagicSnackBar {
@@ -21,7 +26,15 @@ public class MagicSnackBar {
 
     public MagicSnackBar(Activity activity) {
         this.activity = activity;
+
+        //Con esto se añade la view al root:
         this.view = activity.findViewById(android.R.id.content).getRootView();
+        ViewGroup viewGroup = (ViewGroup) ((ViewGroup) activity.findViewById(android.R.id.content)).getChildAt(0);
+        view.inflate(activity,R.layout.snackbar,viewGroup);
+
+        viewGroup = (ViewGroup) ((ViewGroup) activity.findViewById(android.R.id.content)).getChildAt(0);
+        view.inflate(activity,R.layout.snackbar_error,viewGroup);
+
         capaNotificacion = (LinearLayout) view.findViewById(R.id.capaNotificacion);
         capaNotificacionAviso = (LinearLayout) view.findViewById(R.id.capaNotificacionAviso);
     }

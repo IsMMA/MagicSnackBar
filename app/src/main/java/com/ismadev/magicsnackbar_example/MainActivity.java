@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         magicSnackBar = new MagicSnackBar(this);
-        magicSnackBar.snackBar("Hello World");
+        magicSnackBar.snackBar("Hello world");
     }
 
 
