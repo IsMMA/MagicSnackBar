@@ -31,7 +31,7 @@ android {
 
 group = "com.ismadev"
 archivesBaseName = "module-data"
-version = "1.0"  //customize this for new release
+version = "1.0.2"  //customize this for new release
 
 uploadArchives {
     repositories {
