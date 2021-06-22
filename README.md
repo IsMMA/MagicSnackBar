@@ -1,5 +1,7 @@
 # MagicSnackBar
-SnackBar creator module for Android
+SnackBar creator module for Android like Pokémon Go.
+
+How to use:
 
 ![alt text](https://github.com/IsMMA/MagicSnackBar/blob/main/example.gif "SnackBar")
 
@@ -19,3 +21,27 @@ Step 2. Add the dependency
 	        implementation 'com.github.IsMMA:MagicSnackBar:1.0.2'
 	}
 
+
+
+And:
+
+ 	private MagicSnackBar magicSnackBar;
+ 
+	  @Override
+	    protected void onCreate(Bundle savedInstanceState) {
+		...
+		
+		//Instance
+		magicSnackBar = new MagicSnackBar(this);
+		
+		//Launch snackbar (blue)
+		magicSnackBar.snackBar("Hello world");
+		
+		//Launch error snackbar (red)
+		magicSnackBar.snackBarError("Error");
+		
+		//Change duration (in mills):
+		magicSnackBar.setDuration(4000);
+		
+		...
+	    }
