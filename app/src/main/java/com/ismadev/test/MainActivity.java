@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         magicSnackBar = new MagicSnackBar(this);
         magicSnackBar.snackBar("Hello world");
+        magicSnackBar.snackBarError("Error");
+        magicSnackBar.setDuration(2233);
     }
 
 
