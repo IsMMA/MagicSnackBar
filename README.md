@@ -20,15 +20,19 @@ Step 2. Add the dependency
 	dependencies {
 	        implementation 'com.github.IsMMA:MagicSnackBar:1.0.2'
 	}
+	
+	
+Step 2.1 (if step 2 fails) Add in settings.gradle
 
-Step 2 (if step 2 fails) Add in settings.gradle
-
- repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
       ...
         maven { url 'https://jitpack.io' }
       
     }
+
+
+
 
 And:
 
